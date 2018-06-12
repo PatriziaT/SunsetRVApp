@@ -4,31 +4,48 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+//import { ListPage } from '../pages/list/list';
+
+import { SpecialsPage } from '../pages/specials/specials';
+import { FavoritePage } from '../pages/favorite/favorite';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { FavoritesProvider } from '../providers/favorites/favorites';
+import { SpecialsProvider } from '../providers/specials/specials';
+//import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-httpmsg';
+
+
+import { HttpModule } from '@angular/http';
+import { baseURL } from '../shared/baseurl';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    SpecialsPage,
+    FavoritePage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    SpecialsPage,
+    FavoritePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    FavoritesProvider,
+    //ProcessHttpmsgProvider,
+    { provide: 'BaseURL', useValue: baseURL },
+    SpecialsProvider
   ]
 })
 export class AppModule {}
