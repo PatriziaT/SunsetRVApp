@@ -13,11 +13,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FavoritesProvider } from '../providers/favorites/favorites';
 import { SpecialsProvider } from '../providers/specials/specials';
-//import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-httpmsg';
+import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-httpmsg';
 
 
 import { HttpModule } from '@angular/http';
 import { baseURL } from '../shared/baseurl';
+import { RVsProvider } from '../providers/rvs/rvs';
 
 @NgModule({
   declarations: [
@@ -43,9 +44,10 @@ import { baseURL } from '../shared/baseurl';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     FavoritesProvider,
-    //ProcessHttpmsgProvider,
+    ProcessHttpmsgProvider,
     { provide: 'BaseURL', useValue: baseURL },
-    SpecialsProvider
+    SpecialsProvider,
+    RVsProvider
   ]
 })
 export class AppModule {}
