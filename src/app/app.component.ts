@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, ModalController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -8,6 +8,7 @@ import { SpecialsPage } from '../pages/specials/specials';
 
 //import { ListPage } from '../pages/list/list';
 import { FavoritePage } from '../pages/favorite/favorite';
+import { LoginPage } from '../pages/login/login';
 @Component({
   templateUrl: 'app.html'
 })
@@ -19,7 +20,11 @@ export class MyApp {
   
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(
+    public platform: Platform, 
+    public statusBar: StatusBar, 
+    public splashScreen: SplashScreen,
+    public modalCtrl: ModalController,) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -45,5 +50,9 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+  openLogin() {
+    let modal = this.modalCtrl.create(LoginPage);
+    modal.present();
   }
 }

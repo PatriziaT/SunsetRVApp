@@ -14,5 +14,27 @@
 
 
 <ion-content padding>
-
+  <ion-content padding>
+    
+     <!--1st News article-->
+     <ion-card class="news-card" *ngIf="news">
+       <img src= {{news[0].urlToImage}} />
+       <ion-card-content>
+         <ion-card-title>
+           {{ news[0].title }}
+           </ion-card-title>
+         <p class="card-author">
+          By: {{ news[0].author }} 
+         </p>
+         <p class="card-author">
+           Source: {{ news[0].source.name }}
+         </p>
+         <p class="card-desc">
+           {{ news[0].description }}
+         </p>
+         <button ion-button>
+           <a href="{{ news[0].url }}">Read More</a>
+         </button>
+       </ion-card-content>
+     </ion-card>
 </ion-content>
