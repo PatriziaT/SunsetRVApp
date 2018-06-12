@@ -4,7 +4,7 @@
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-      <ion-title>My Favorites</ion-title>
+      <ion-title>My RVs</ion-title>
     </ion-navbar>
   
   </ion-header>
@@ -32,7 +32,7 @@
     </div>
     <div [hidden]="favorites || errMess">
       <ion-spinner></ion-spinner>
-      <h4>Loading . . . Please Wait</h4>
+      <h4>Loading . . . your favorite RVs</h4>
     </div>
     <div *ngIf="errMess">
       <h2>Error</h2>
