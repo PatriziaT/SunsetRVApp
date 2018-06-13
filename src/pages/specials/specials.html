@@ -13,8 +13,16 @@
 
   <ion-content padding>
     
-     <!--one rv-->
-     <ion-card class="rvs-card" *ngIf="rvs">
+    <ion-list *ngFor="let specials of specialsList">
+
+      <ion-item>{{specials.id}} {{specials.specials}}
+
+      </ion-item>
+    </ion-list>
+
+
+     <!-- one rv-->
+     <!-- <ion-card class="rvs-card" *ngIf="rvs">
        <img src= {{rvs[0].urlToImage}} />
        <ion-card-content>
          <ion-card-title>
@@ -35,7 +43,7 @@
        </ion-card-content>
      </ion-card>
 
-    <!-- Heart icon  -->
+    Heart icon  
      <ion-fab bottom right [hidden]="favorite">
       <button ion-fab (click)="addToFavorites()">
         <ion-icon name="heart-outline"></ion-icon>
@@ -45,6 +53,6 @@
       <button ion-fab>
         <ion-icon name="heart"></ion-icon>
       </button>
-    </ion-fab>
+    </ion-fab>  -->
           
 </ion-content>

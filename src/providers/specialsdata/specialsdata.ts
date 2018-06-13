@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class SpecialsProvider {
@@ -19,8 +20,20 @@ export class SpecialsProvider {
 
 getSpecials() {
   return this.http.get(this.apiUrl)
-  .do((res: Response) => console.log(res))
-  .map((res: Response) => res.json())
+  .do(this.logResponse)
+  .map(this.extractData)
+  .catch(this.catchError)
 }
 
+private catchError(error: Response | any){
+  console.log(error);
+  return Observable.throw(error.json().error || "Server error.");
+}
+
+private logResponse(res: Response) {
+  console.log(res);
+}
+private extractData(res: Response) {
+  return res.json();
+}
 }

@@ -22,7 +22,7 @@ export class SpecialsPage {
   }
 
   getSpecials() {
-    this.specialsData.getSpecials().subscribe(data => console.log(data));
+    this.specialsData.getSpecials().subscribe(data => this.specialsList = data);
   }
 
 
