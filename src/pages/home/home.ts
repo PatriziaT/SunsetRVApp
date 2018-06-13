@@ -1,32 +1,41 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, Inject } from '@angular/core';
+//import { HttpModule } from '@angular/http';
+import { NavController} from 'ionic-angular';
 import { RVs } from '../../shared/rvs';
 import { RVsProvider } from '../../providers/rvs/rvs';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
+  //templateUrl: 'build/pages/tabs/tabs.html'
+
 })
-export class HomePage implements OnInit {
+export class HomePage {
   
     rvs: RVs;
-   
-    rvsErrMess: string;
-    promoErrMess: string;
-    leaderErrMess: string;
+    errorMessage: string;
+    
+    
   
     constructor(public navCtrl: NavController,
-      private rvsservice: RVsProvider,
+      public rvsservice: RVsProvider) {
+      }
+
+      // getRVs() {
+      //   this.rvs.getRVs()
+      //      .subscribe(
+      //        rvs => this.rvs = rvs,
+      //        error =>  this.errorMessage = <any>error);
+      // }
     
-      @Inject('BaseURL') private BaseURL) { }
+    //@Inject('BaseURL') public BaseURL) { }
   
-    ngOnInit() {
-      this.rvsservice.getFeaturedRVs()
-         .subscribe(rvs => this.rvs = rvs,
-          errmess => this.rvsErrMess = <any>errmess );
+    //ngOnInit() {
+    //   this.rvsservice.getFeaturedRVs()
+    //      .subscribe(rvs => this.rvs = rvs,
+    //       errmess => this.errorMessage = <any>errmess );
      
   
-    }
+    // }
   
   }
-  

@@ -24,7 +24,8 @@ export class MyApp {
     public platform: Platform, 
     public statusBar: StatusBar, 
     public splashScreen: SplashScreen,
-    public modalCtrl: ModalController,) {
+    public modalCtrl: ModalController,
+    ) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation

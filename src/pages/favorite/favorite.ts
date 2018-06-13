@@ -1,13 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
 //import { FavoritesProvider } from '../../providers/favorites/favorites';
-/**
- * Generated class for the FavoritePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -22,12 +17,12 @@ export class FavoritePage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
+    //public viewCtrl: ViewController,
    // private favoriteservice: FavoritesProvider,
     //@Inject('BaseURL')
-  ) 
-    
+) 
     {
   }
   
-  
+
 }

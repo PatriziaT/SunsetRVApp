@@ -13,18 +13,42 @@ import 'rxjs/add/operator/catch';
 
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
+
+
 */
 @Injectable()
 export class RVsProvider {
 
-  constructor(public http: Http,
-              private processHTTPMsgService: ProcessHttpmsgProvider) { }
+  result: Object;
+ 
 
-  getRVses(): Observable<RVs[]> {
-    return this.http.get(baseURL + 'rvs')
-                    .map(res => { return this.processHTTPMsgService.extractData(res); })
-                    .catch(error => { return this.processHTTPMsgService.handleError(error); });
-  }
+  // private apiUrl: string = "https://www.parsehub.com/api/v2/projects/tAKTtgEqpu4Y/last_ready_run/data";
+
+  constructor(public http: Http,
+              private processHTTPMsgService: ProcessHttpmsgProvider) {}
+
+  // getRVses(): Observable<RVs[]> {
+  //   return this.http.get(this.apiUrl).pipe(
+  //     map(this.extractData),  
+  //     catchError(this.handleError)
+  //   );
+  // }
+  // private extractData(res: Response) {
+  //   let body = res;
+  //   return body || { };
+  // }
+  
+  // private handleError (error: Response | any) {
+  //   let errMsg: string;
+  //   if (error instanceof Response) {
+  //     const err = error || '';
+  //     errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
+  //   } else {
+  //     errMsg = error.message ? error.message : error.toString();
+  //   }
+  //   console.error(errMsg);
+  //   return Observable.throw(errMsg);
+  // }
 
   getRVs(id: number): Observable<RVs> {
     return  this.http.get(baseURL + 'rvs/'+ id)
