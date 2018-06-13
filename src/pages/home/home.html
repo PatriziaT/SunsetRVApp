@@ -11,17 +11,16 @@
 
 <ion-content padding>
 
-    <!-- <ion-tabs>
-        <ion-tab [root]="tab1Root"></ion-tab>
-        <ion-tab [root]="tab2Root"></ion-tab>
-        <ion-tab [root]="tab3Root"></ion-tab>
-      </ion-tabs> -->
-
-  <h3>Sunset RV App</h3>
+  <h3>Welcome to Sunset RV</h3>
 
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
   </p>
+
+  <ion-tabs>
+      <ion-tab [root]="specialsRoot" tabTitle="RV-Specials" tabIcon="chat"></ion-tab>
+     </ion-tabs>
+
 
   <button ion-button secondary menuToggle>Click for Menu</button>
   

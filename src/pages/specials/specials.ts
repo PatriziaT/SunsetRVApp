@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
-import { RVs } from '../../shared/rvs';
-import { RVsProvider } from '../../providers/rvs/rvs';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SpecialsProvider } from '../../providers/specialsdata/specialsdata';
 
 
 @IonicPage()
@@ -11,23 +10,27 @@ import { RVsProvider } from '../../providers/rvs/rvs';
 })
 export class SpecialsPage {
 
-  rvSpecials = [];
-  rvItem: any;
-  rvs: RVs;
+  specialsList =[];
+  specials: any;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public viewCtrl: ViewController,
-    private rvsdata: RVsProvider) {
-
-      
+    public specialsData: SpecialsProvider) {
+   
+      this.getSpecials();
   }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SpecialsPage');
+
+  getSpecials() {
+    this.specialsData.getSpecials().subscribe(data => console.log(data));
+  }
+
+
+  // ionViewDidLoad() {
+  //   console.log('ionViewDidLoad SpecialsPage');
     
   
-  }
+  // }
 //x button on the side but its not working
   // dismiss() {
   //   this.viewCtrl.dismiss(true);

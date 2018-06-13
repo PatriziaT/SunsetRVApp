@@ -2,7 +2,7 @@ import { Component, Inject } from '@angular/core';
 //import { HttpModule } from '@angular/http';
 import { NavController} from 'ionic-angular';
 import { RVs } from '../../shared/rvs';
-import { RVsProvider } from '../../providers/rvs/rvs';
+import { RVsProvider } from '../../providers/rvsdata/rvsdata';
 
 @Component({
   selector: 'page-home',

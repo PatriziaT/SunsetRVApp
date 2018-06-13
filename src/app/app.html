@@ -1,26 +1,17 @@
 <ion-split-pane>
   <ion-menu [content]="content">
-    <ion-header>
-      <!-- Day1 -->
+<ion-header>
       <ion-toolbar color="primary-dark">
           <ion-thumbnail item-start>
               <img width="35" height="35" src="assets/images/Logo.png" />
             </ion-thumbnail>
         <ion-title>Sunset RV</ion-title>
       </ion-toolbar>
-    </ion-header>
+</ion-header>
   
 
     <ion-content>
       <ion-list>
-      
-          <ion-list-header color="primary-light" text-wrap>
-              <!-- <ion-thumbnail item-left>
-                  <img src="assets/images/Logo.png" />
-                </ion-thumbnail> -->
-                <!-- <h3>Sunset RV </h3> -->
-            </ion-list-header>
-
             <button color="primary-pale" menuClose ion-item (click)="openLogin()">
               <ion-icon name="log-in" item-left></ion-icon>
               Login
@@ -30,8 +21,6 @@
               <ion-icon [name]="p.icon" item-left></ion-icon>
                 {{p.title}}
             </button>
-            
-           
       </ion-list>
       
     </ion-content>

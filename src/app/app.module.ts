@@ -16,9 +16,9 @@ import { RegisterPage } from '../pages/register/register';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FavoritesProvider } from '../providers/favorites/favorites';
-import { SpecialsProvider } from '../providers/specials/specials';
+import { SpecialsProvider } from '../providers/specialsdata/specialsdata';
 import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-httpmsg';
-import { RVsProvider } from '../providers/rvs/rvs';
+import { RVsProvider } from '../providers/rvsdata/rvsdata';
 
 import { HttpModule } from '@angular/http';
 import { baseURL } from '../shared/baseurl';
