@@ -15,6 +15,44 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+  //firebase related
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyC-9NwApoSiMco3JbbG4heIR0vMs5dXU5s",
+      authDomain: "sunset-rv.firebaseapp.com",
+      databaseURL: "https://sunset-rv.firebaseio.com",
+      projectId: "sunset-rv",
+      storageBucket: "sunset-rv.appspot.com",
+      messagingSenderId: "278655601033"
+    };
+    firebase.initializeApp(config);
+  </script>
+  
+<!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+
+<!-- Add additional services you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script>
+
+<!-- Comment out (or don't include) services you don't want to use -->
+<!-- <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-storage.js"></script> -->
+
+<script>
+  var config = {
+    // ...
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+
+
   <!-- cordova.js required for cordova apps (remove if not needed) -->
   <script src="cordova.js"></script>
 
@@ -30,8 +68,8 @@
   <link href="build/main.css" rel="stylesheet">
 
 </head>
-<body>
 
+<body>
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
 

@@ -18,12 +18,12 @@ export class SpecialsPage {
     public navParams: NavParams,
     public specialsData: SpecialsProvider) {
    
-      this.getSpecials();
+      // this.getSpecials();
   }
 
-  getSpecials() {
-    this.specialsData.getSpecials().subscribe(data => this.specialsList = data);
-  }
+  // getSpecials() {
+  //   this.specialsData.getSpecials().subscribe(data => this.specialsList = data);
+  // }
 
 
   // ionViewDidLoad() {

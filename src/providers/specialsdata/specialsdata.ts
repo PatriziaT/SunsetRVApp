@@ -11,19 +11,19 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class SpecialsProvider {
 
-  private apiUrl: string = "https://www.parsehub.com/api/v2/projects/tAKTtgEqpu4Y/last_ready_run/data";
+  //private apiUrl: string = "https://www.parsehub.com/api/v2/projects/tAKTtgEqpu4Y/last_ready_run/data";
   
   constructor(
     private http: HttpClient) {
     console.log('Hello SpecialsProvider Provider');
   }
 
-getSpecials() {
-  return this.http.get(this.apiUrl)
-  .do(this.logResponse)
-  .map(this.extractData)
-  .catch(this.catchError)
-}
+// getSpecials() {
+//   return this.http.get(this.apiUrl)
+//   .do(this.logResponse)
+//   .map(this.extractData)
+//   .catch(this.catchError)
+// }
 
 private catchError(error: Response | any){
   console.log(error);
