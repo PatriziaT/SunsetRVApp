@@ -12,18 +12,33 @@
 </ion-header>
 
   <ion-content padding>
+    <ion-content>
+  
+      <h3>Specials</h3>
+
+
+
+      <!-- <ion-card>
+          <div class="card-title">Sunseeker</div>
+        <img src="assets/imgs/sunset.jpeg"/>
+        
+        <div class="card-subtitle">40 Listings</div>
+        
+      </ion-card> -->
     
-    <ion-list *ngFor="let specials of specialsList">
+    
+    <!-- <ion-list *ngFor="let specials of specialsList">
 
       <ion-item>{{specials.id}} {{specials.specials}}
 
       </ion-item>
-    </ion-list>
+    </ion-list> -->
 
-
-     <!-- one rv-->
+    <!-- this card not showing -->
+     <!-- one rv--> 
      <!-- <ion-card class="rvs-card" *ngIf="rvs">
-       <img src= {{rvs[0].urlToImage}} />
+       <img src= {{rvs[0].urlToImage}} 
+       <img src="https://firebasesto...-84f6-d4b5cdb66019">
        <ion-card-content>
          <ion-card-title>
            {{ rvs[0].title }}
@@ -41,10 +56,10 @@
            <a href="{{ rvs[0].url }}">Read More</a>
          </button>
        </ion-card-content>
-     </ion-card>
+     </ion-card> -->
 
-    Heart icon  
-     <ion-fab bottom right [hidden]="favorite">
+    <!-- Heart icon   -->
+     <!-- <ion-fab bottom right [hidden]="favorite">
       <button ion-fab (click)="addToFavorites()">
         <ion-icon name="heart-outline"></ion-icon>
       </button>
@@ -54,5 +69,16 @@
         <ion-icon name="heart"></ion-icon>
       </button>
     </ion-fab>  -->
+    <ion-fab right bottom>
+      <button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
+     <ion-fab-list side="left">
+      <button ion-fab><ion-icon name="heart-outline"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-share"></ion-icon></button>
+        </ion-fab-list>
+  </ion-fab>
+  <ion-fab left bottom >
+    <button ion-fab>Share</button>
+  </ion-fab>
           
 </ion-content>

@@ -18,16 +18,19 @@ export class SpecialsPage {
     public navParams: NavParams,
     public specialsData: SpecialsProvider) {
    
-      // this.getSpecials();
+      
   }
+
+  //this was inside aboves constructor
+  // this.getSpecials();
 
   // getSpecials() {
   //   this.specialsData.getSpecials().subscribe(data => this.specialsList = data);
   // }
 
 
-  // ionViewDidLoad() {
-  //   console.log('ionViewDidLoad SpecialsPage');
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad SpecialsPage');
     
   
   // }
@@ -36,4 +39,4 @@ export class SpecialsPage {
   //   this.viewCtrl.dismiss(true);
   // }
 
-}
+}}

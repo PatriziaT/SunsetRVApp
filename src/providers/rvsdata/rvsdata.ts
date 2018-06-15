@@ -4,18 +4,11 @@ import { Observable } from 'rxjs/Observable';
 import { Http, Response } from '@angular/http';
 import { baseURL } from '../../shared/baseurl';
 import { ProcessHttpmsgProvider } from '../process-httpmsg/process-httpmsg';
+
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/delay';
 import 'rxjs/add/operator/catch';
 
-/*
-  Generated class for the RVsProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-
-
-*/
 @Injectable()
 export class RVsProvider {
 

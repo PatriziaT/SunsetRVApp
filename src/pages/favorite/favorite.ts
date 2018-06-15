@@ -17,7 +17,7 @@ export class FavoritePage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    //public viewCtrl: ViewController,
+    public viewCtrl: ViewController,
    // private favoriteservice: FavoritesProvider,
     //@Inject('BaseURL')
 ) 

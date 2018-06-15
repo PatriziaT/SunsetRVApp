@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
-import { Observable } from 'rxjs/Observable';
+
 
 @Injectable()
 export class SpecialsProvider {
@@ -25,15 +25,15 @@ export class SpecialsProvider {
 //   .catch(this.catchError)
 // }
 
-private catchError(error: Response | any){
-  console.log(error);
-  return Observable.throw(error.json().error || "Server error.");
-}
+// private catchError(error: Response | any){
+//   console.log(error);
+//   return Observable.throw(error.json().error || "Server error.");
+// }
 
-private logResponse(res: Response) {
-  console.log(res);
-}
-private extractData(res: Response) {
-  return res.json();
-}
+// private logResponse(res: Response) {
+//   console.log(res);
+// }
+// private extractData(res: Response) {
+//   return res.json();
+// }
 }

@@ -8,7 +8,8 @@ import { SpecialsPage } from '../pages/specials/specials';
 
 //import { ListPage } from '../pages/list/list';
 import { FavoritePage } from '../pages/favorite/favorite';
-import { LoginPage } from '../pages/login/login';
+
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -29,15 +30,16 @@ export class MyApp {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
+    //side navi bar 
     this.pages = [
+  
       { title: 'Home', component: HomePage },
-      { title: 'Specials', component: SpecialsPage },
+      { title: 'Specials', component: SpecialsPage }, 
       { title: 'Favorite', component: FavoritePage }
       
     ];
 
   }
-
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -51,9 +53,5 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
-  }
-  openLogin() {
-    let modal = this.modalCtrl.create(LoginPage);
-    modal.present();
   }
 }

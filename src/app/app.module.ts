@@ -23,7 +23,7 @@ import { RVsProvider } from '../providers/rvsdata/rvsdata';
 import { HttpModule } from '@angular/http';
 import { baseURL } from '../shared/baseurl';
 
-
+//import firebase from 'firebase';
 @NgModule({
   declarations: [
     MyApp,

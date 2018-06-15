@@ -9,21 +9,17 @@
       </ion-toolbar>
 </ion-header>
   
-
-    <ion-content>
-      <ion-list>
-            <button color="primary-pale" menuClose ion-item (click)="openLogin()">
-              <ion-icon name="log-in" item-left></ion-icon>
-              Login
-            </button>
-            
+<ion-content>
+  <ion-list>
+           <!-- Menu side nav buttons  -->
           <button color="primary-pale" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
               <ion-icon [name]="p.icon" item-left></ion-icon>
                 {{p.title}}
             </button>
-      </ion-list>
-      
-    </ion-content>
+
+          
+      </ion-list>    
+  </ion-content>
   
   </ion-menu>
   

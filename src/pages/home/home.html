@@ -1,10 +1,20 @@
 <ion-header>
-    <ion-navbar color="primary">
-        <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-title>Home</ion-title>
-      </ion-navbar>      
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+    <ion-buttons end >
+      <button ion-button (click)="openLogin()">
+          
+      <ion-icon name="log-in"></ion-icon>
+    </button>
+    </ion-buttons>
+  
+  </ion-navbar>  
+
+             
+     
     
 </ion-header>
 
@@ -13,11 +23,9 @@
 
   <h3>Welcome to Sunset RV</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+</ion-content>
 
-  <ion-tabs>
+  <!-- <ion-tabs>
       <ion-tab [root]="specialsRoot" tabTitle="RV-Specials" tabIcon="chat"></ion-tab>
      </ion-tabs>
 
@@ -45,6 +53,7 @@
   </ion-grid>
 
 
+
   <div [hidden]="rvs || rvsErrMess">
     <ion-spinner></ion-spinner>
     <h4>Loading . . . driving off the lot</h4>
@@ -52,7 +61,7 @@
   <div *ngIf="rvsErrMess">
     <h2>Error</h2>
     <h4>{{rvsErrMess}}</h4>
-  </div>
+  </div> -->
 
   
 
