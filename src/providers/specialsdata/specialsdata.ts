@@ -11,29 +11,29 @@ import 'rxjs/add/observable/throw';
 @Injectable()
 export class SpecialsProvider {
 
-  //private apiUrl: string = "https://www.parsehub.com/api/v2/projects/tAKTtgEqpu4Y/last_ready_run/data";
+  private apiUrl: string = "https://www.ecom.wix.com/_api/wix-ecommerce-renderer-web/store-manager/products/{productId}";
   
   constructor(
     private http: HttpClient) {
     console.log('Hello SpecialsProvider Provider');
   }
 
-// getSpecials() {
-//   return this.http.get(this.apiUrl)
-//   .do(this.logResponse)
-//   .map(this.extractData)
-//   .catch(this.catchError)
-// }
+getSpecials() {
+  return this.http.get(this.apiUrl)
+  .do(this.logResponse)
+  .map(this.extractData)
+  .catch(this.catchError)
+}
 
-// private catchError(error: Response | any){
-//   console.log(error);
-//   return Observable.throw(error.json().error || "Server error.");
-// }
+private catchError(error: Response | any){
+  console.log(error);
+  return Observable.throw(error.json().error || "Server error.");
+}
 
-// private logResponse(res: Response) {
-//   console.log(res);
-// }
-// private extractData(res: Response) {
-//   return res.json();
-// }
+private logResponse(res: Response) {
+  console.log(res);
+}
+private extractData(res: Response) {
+  return res.json();
+}
 }

@@ -5,12 +5,13 @@ import { RVs } from '../../shared/rvs';
 import { RVsProvider } from '../../providers/rvsdata/rvsdata';
 
 import { LoginPage } from './../login/login';
-
+import { FavoritePage } from './../favorite/favorite';
+import { SettingsPage } from './../settings/settings';
 //import firebase from 'firebase';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
-  //templateUrl: 'build/pages/tabs/tabs.html'
+  
 
 })
 export class HomePage {
@@ -26,10 +27,28 @@ export class HomePage {
       public modalCtrl: ModalController) {
 
       }
+
+      
+
+      // opens the login Page
       openLogin() {
       let modal = this.modalCtrl.create(LoginPage);
       modal.present();
     }
+
+    // opens Favorite Page
+    openFavorite() {
+      let modal = this.modalCtrl.create(FavoritePage);
+      modal.present();
+    }
+
+    // opens Settings Page
+    openSettings() {
+      let modal = this.modalCtrl.create(SettingsPage);
+      modal.present();
+    }
+
+
       // createPerson(firstName: string, lastName: string): void {
       //   const personRef: firebase.database.Reference = firebase.database().ref(`/person1/`);
       //   personRef.set({

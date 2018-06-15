@@ -2,7 +2,7 @@
 <ion-header>
   
       <ion-toolbar color="primary-pale">
-          <ion-thumbnail item-left>
+          <ion-thumbnail>
               <img width="35" height="35" src="assets/images/Logo.png" />
             </ion-thumbnail>
 
@@ -18,13 +18,16 @@
               <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
             </button>
           </ion-buttons>    
-          <ion-title>Login</ion-title>
+          <!-- <ion-title>Login</ion-title> -->
         </ion-toolbar>
   
   </ion-header>
   
   
   <ion-content padding>
+      <ion-title>
+          Login
+        </ion-title>
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
           <ion-item>
             <ion-label floating>Username</ion-label>
