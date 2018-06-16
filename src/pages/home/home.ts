@@ -1,4 +1,6 @@
-import { Component, Inject } from '@angular/core';
+import { Component} from '@angular/core';
+// Inject doesnt work in the import above
+
 //import { HttpModule } from '@angular/http';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { RVs } from '../../shared/rvs';

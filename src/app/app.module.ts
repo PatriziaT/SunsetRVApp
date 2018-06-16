@@ -12,7 +12,7 @@ import { Firebase_Config } from './firebase_config';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 //import { ListPage } from '../pages/list/list';
-import { SpecialsPage } from '../pages/specials/specials';
+// import { SpecialsPage } from '../pages/specials/specials';
 import { FavoritePage } from '../pages/favorite/favorite';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
@@ -29,6 +29,7 @@ import { RVsProvider } from '../providers/rvsdata/rvsdata';
 import { UserProvider } from '../providers/user/user';
 
 import { baseURL } from '../shared/baseurl';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { baseURL } from '../shared/baseurl';
     SpecialsProvider,
     RVsProvider,
     UserProvider,
-    AngularFireAuth
+    AngularFireAuth,
+    AuthServiceProvider
   ]
 })
 export class AppModule {}
