@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { SpecialsPage } from '../pages/specials/specials';
 import { NewinventoryPage } from '../pages/newinventory/newinventory';
+import { LoginPage } from '../pages/login/login';
 //import { ListPage } from '../pages/list/list';
 // import { FavoritePage } from '../pages/favorite/favorite';
 
@@ -27,8 +28,7 @@ export class MyApp {
     public splashScreen: SplashScreen,
     public modalCtrl: ModalController,
     ) {
-    this.initializeApp();
-
+    
     // used for an example of ngFor and navigation
     //side navi bar 
     this.pages = [
@@ -46,6 +46,8 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.rootPage = LoginPage;
+      
     });
   }
 

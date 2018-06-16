@@ -15,7 +15,9 @@ import { RegisterPage } from '../register/register';
 export class LoginPage {
 
   loginForm: FormGroup;
-  user: User = {username: '', password: ''};
+  user = {} as User;
+  // user: User = {username: '', password: ''};
+
 
   constructor(
     public navCtrl: NavController, 

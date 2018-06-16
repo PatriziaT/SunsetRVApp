@@ -11,11 +11,11 @@
   </ion-header>
   
   
-  <ion-content padding>
+  <!-- <ion-content padding>
     <ion-card>
       <ion-card-header color="primary">Your Picture</ion-card-header>
-      <img xs src="{{image}}" />
-      <!-- <ion-grid>
+      <img xs src="{{image}}" /> -->
+      <!-- <ion-grid> grid was commented out while the rest wasnt
         <ion-row>
           <ion-col>
             <button ion-button small (click)="getPicture()">Take Picture</button>
@@ -23,7 +23,7 @@
           </ion-col>
         </ion-row>
       </ion-grid> -->
-    </ion-card>
+    <!-- </ion-card>
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
       <ion-item>
         <ion-label floating>First Name</ion-label>
@@ -51,5 +51,18 @@
       </ion-item>
       <button ion-button type="submit" [disabled]="!registerForm.valid">Register</button>
     </form>
-  </ion-content>
+  </ion-content> -->
+
+  <!-- testing it out -->
+  <ion-content>
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" [(ngModel)]="user.username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+      </ion-item>
+      <button ion-button (click)="onSubmit(user)">Register</button>
+    </ion-content>
 
