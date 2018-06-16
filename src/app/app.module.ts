@@ -12,6 +12,7 @@ import { FavoritePage } from '../pages/favorite/favorite';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { SettingsPage } from '../pages/settings/settings';
+import { NewinventoryPage } from '../pages/newinventory/newinventory';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,6 +26,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { HttpModule } from '@angular/http';
 import { baseURL } from '../shared/baseurl';
 
+
 //import firebase from 'firebase';
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { baseURL } from '../shared/baseurl';
     FavoritePage,
     LoginPage,
     RegisterPage,
-    SettingsPage
+    SettingsPage,
+    NewinventoryPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ import { baseURL } from '../shared/baseurl';
     FavoritePage,
     LoginPage,
     RegisterPage,
-    SettingsPage
+    SettingsPage,
+    NewinventoryPage
   ],
   providers: [
     StatusBar,

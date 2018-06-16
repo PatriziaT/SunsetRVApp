@@ -3,7 +3,6 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 
 //import { FavoritesProvider } from '../../providers/favorites/favorites';
 
-
 @IonicPage()
 @Component({
   selector: 'page-favorite',

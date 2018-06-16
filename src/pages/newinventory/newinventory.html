@@ -1,21 +1,19 @@
-
 <ion-header>
-
-  <ion-navbar>
-      <ion-buttons left>
-          <button ion-button icon-only (click)="viewCtrl.dismiss()">
-              <ion-icon name="arrow-back"></ion-icon>
-          </button>
-      </ion-buttons>
-    <ion-title>Settings</ion-title>
+    <ion-navbar color="primary">
+        <ion-buttons start>
+            <button ion-button icon-only (click)="viewCtrl.dismiss()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+    <ion-title>New RVs</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
 
 </ion-content>
+
 
 <ion-footer>
     <ion-toolbar color="primary">
@@ -24,8 +22,8 @@
           </ion-buttons>
   
       <ion-buttons end>
-          <!-- <button ion-button  (click)="openFavorite()">
-              <ion-icon name="heart-outline"></ion-icon></button> -->
+          <button ion-button  (click)="openFavorite()">
+              <ion-icon name="heart-outline"></ion-icon></button>
           <button ion-button  (click)="openSettings()">
                   <ion-icon name="settings"></ion-icon></button>
       </ion-buttons>

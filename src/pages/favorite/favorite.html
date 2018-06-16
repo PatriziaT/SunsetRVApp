@@ -1,27 +1,19 @@
 <ion-header>
     <ion-navbar color="primary">
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button> 
-        
-      <ion-title>My RVs</ion-title>
-      <!-- <ion-buttons end> for some reason it does not work
-          <button ion-button icon-only (click)="closeModal()">
-            <ion-icon name="close"></ion-icon></button>
-          </ion-buttons>  -->
-    </ion-navbar>
-  
-  </ion-header>
+        <ion-buttons start>
+            <button ion-button icon-only (click)="viewCtrl.dismiss()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+       <ion-title>My RVs</ion-title>
+   </ion-navbar>
+</ion-header>
   
   
   <!-- <ion-content padding> -->
-  
-    <h3>Your Favorite Rvs</h3>
 
     <ion-content class="card-background-page">
-    
-    
-      <ion-fab right bottom>
+    <ion-fab right bottom>
           <button ion-fab color="primary"><ion-icon name="logo-facebook"></ion-icon></button>
    
       </ion-fab>
@@ -30,7 +22,23 @@
       </ion-fab>
     </ion-content>
   
-   
+    <ion-footer>
+        <ion-toolbar color="primary">
+            <ion-buttons start>
+                <button ion-button (click)="openLogout()">Logout</button>  
+              </ion-buttons>
+      
+          <ion-buttons end>
+             <!-- No need of the heart inside the saved items page -->
+              <!-- <button ion-button  (click)="openFavorite()">
+                  <ion-icon name="heart-outline"></ion-icon></button> -->
+              <button ion-button  (click)="openSettings()">
+                      <ion-icon name="settings"></ion-icon></button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-footer>
+
+
     <!-- <div *ngIf="favorites">
       <ion-list>
         <ion-item-sliding *ngFor="let favorite of favorites" #item>
