@@ -7,8 +7,7 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { Firebase_Config } from '../config';
-
+import { Firebase_Config } from './firebase_config';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';

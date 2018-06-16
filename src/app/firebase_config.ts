@@ -1,5 +1,5 @@
 
-export const firebase_Config = {
+export const Firebase_Config = {
     fire: {
     apiKey: "AIzaSyC-9NwApoSiMco3JbbG4heIR0vMs5dXU5s",
     authDomain: "sunset-rv.firebaseapp.com",
