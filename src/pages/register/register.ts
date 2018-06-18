@@ -26,8 +26,7 @@ export class RegisterPage {
     private viewCtrl: ViewController,
     private formBuilder: FormBuilder,
     public userProvider: UserProvider,
-    // private aFAuth: AngularFireAuth
-  ) {
+    private aFAuth: AngularFireAuth) {
   
       this.registerForm = this.formBuilder.group({
         firstname: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(25)] ],
