@@ -6,7 +6,7 @@ import { UserProvider } from '../../providers/user/user'
 import { User } from '../../shared/user';
 
 
-import { AngularFireAuth } from 'angularfire2/auth';
+// import { AngularFireAuth } from 'angularfire2/auth';
 @IonicPage()
 @Component({
   selector: 'page-register',
@@ -26,7 +26,8 @@ export class RegisterPage {
     private viewCtrl: ViewController,
     private formBuilder: FormBuilder,
     public userProvider: UserProvider,
-    private aFAuth: AngularFireAuth) {
+    // private aFAuth: AngularFireAuth
+  ) {
   
       this.registerForm = this.formBuilder.group({
         firstname: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(25)] ],

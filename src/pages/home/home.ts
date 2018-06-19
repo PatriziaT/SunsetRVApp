@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 //import { HttpModule } from '@angular/http';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { RVs } from '../../shared/rvs';

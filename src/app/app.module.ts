@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
 
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuth } from 'angularfire2/auth';
+// import { AngularFireAuth } from 'angularfire2/auth';
 import { Firebase_Config } from './firebase_config';
 
 import { MyApp } from './app.component';
@@ -48,7 +48,7 @@ import { baseURL } from '../shared/baseurl';
     HttpModule,
     IonicStorageModule.forRoot(),
     AngularFireModule.initializeApp(Firebase_Config.fire),
-    AngularFireAuth
+    // AngularFireAuth
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -71,7 +71,7 @@ import { baseURL } from '../shared/baseurl';
     SpecialsProvider,
     RVsProvider,
     UserProvider,
-    AngularFireAuth
+    // AngularFireAuth
   ]
 })
 export class AppModule {}

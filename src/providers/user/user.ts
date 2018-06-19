@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { AngularFireAuth } from 'angularfire2/auth'
+// import { AngularFireAuth } from 'angularfire2/auth'
 import { User } from '../../shared/user';
 
 @Injectable()
@@ -11,7 +11,7 @@ export class UserProvider {
 
 
   constructor(
-    private aFAuth: AngularFireAuth,
+    // private aFAuth: AngularFireAuth,
     public http: HttpClientModule) {
       console.log('Hello UserProvider Provider');
   }
