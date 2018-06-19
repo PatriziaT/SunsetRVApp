@@ -73,5 +73,4 @@ this.loginForm = this.formBuilder.group({
     this.viewCtrl.dismiss();
   }
  
-
 }

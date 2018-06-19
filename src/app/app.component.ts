@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { SpecialsPage } from '../pages/specials/specials';
 import { NewinventoryPage } from '../pages/newinventory/newinventory';
 import { LoginPage } from '../pages/login/login';
+// import { LogoutPage } from '../pages/logout/logout';
 //import { ListPage } from '../pages/list/list';
 // import { FavoritePage } from '../pages/favorite/favorite';
 
@@ -30,12 +31,12 @@ export class MyApp {
     ) {
     
     // used for an example of ngFor and navigation
-    //side navi bar 
+    // side navi bar 
     this.pages = [
   
       { title: 'Home', component: HomePage },
-      { title: 'Used RV', component: SpecialsPage }, 
-      { title: 'New RV', component: NewinventoryPage }
+      { title: 'Used Trucks', component: SpecialsPage }, 
+      { title: 'New Trucks', component: NewinventoryPage }
       
     ];
 
@@ -47,6 +48,7 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       this.rootPage = LoginPage;
+      
       
     });
   }

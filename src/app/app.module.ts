@@ -18,6 +18,7 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { SettingsPage } from '../pages/settings/settings';
 import { NewinventoryPage } from '../pages/newinventory/newinventory';
+import { LogoutPage } from '../pages/logout/logout';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -29,6 +30,7 @@ import { RVsProvider } from '../providers/rvsdata/rvsdata';
 import { UserProvider } from '../providers/user/user';
 
 import { baseURL } from '../shared/baseurl';
+import { NewRvProvider } from '../providers/new-rv/new-rv';
 
 @NgModule({ 
   declarations: [
@@ -39,7 +41,8 @@ import { baseURL } from '../shared/baseurl';
     LoginPage, 
     RegisterPage,
     SettingsPage,
-    NewinventoryPage
+    NewinventoryPage,
+    LogoutPage
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,8 @@ import { baseURL } from '../shared/baseurl';
     LoginPage,
     RegisterPage,
     SettingsPage,
-    NewinventoryPage
+    NewinventoryPage,
+    LogoutPage
   ],
   providers: [
     StatusBar,
@@ -71,6 +75,7 @@ import { baseURL } from '../shared/baseurl';
     SpecialsProvider,
     RVsProvider,
     UserProvider,
+    NewRvProvider,
     // AngularFireAuth
   ]
 })

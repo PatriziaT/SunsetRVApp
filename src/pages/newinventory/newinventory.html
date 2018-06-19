@@ -1,16 +1,19 @@
 <ion-header>
-    <ion-navbar color="primary">
-        <ion-buttons start>
-            <button ion-button icon-only (click)="viewCtrl.dismiss()">
-                <ion-icon name="arrow-back"></ion-icon>
-            </button>
-        </ion-buttons>
+        <ion-navbar>
+                <ion-buttons left>
+                    <button ion-button icon-only (click)="dismiss()">
+                        <ion-icon name="arrow-back"></ion-icon>
+                    </button>
+                </ion-buttons>
+             
+           
+      
     <ion-title>New RVs</ion-title>
   </ion-navbar>
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="card-background-page">
 
 </ion-content>
 
@@ -24,6 +27,7 @@
       <ion-buttons end>
           <button ion-button  (click)="openFavorite()">
               <ion-icon name="heart-outline"></ion-icon></button>
+
           <button ion-button  (click)="openSettings()">
                   <ion-icon name="settings"></ion-icon></button>
       </ion-buttons>

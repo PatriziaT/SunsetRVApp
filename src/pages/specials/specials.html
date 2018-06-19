@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar color="primary">
         <ion-buttons start>
-            <button ion-button icon-only (click)="viewCtrl.dismiss()">
+            <button ion-button icon-only (click)="dismiss()">
                 <ion-icon name="arrow-back"></ion-icon>
             </button>
         </ion-buttons>
@@ -9,12 +9,25 @@
   </ion-navbar>
 </ion-header>
 
+<ion-content class="card-background-page">
+
+  </ion-content>
+
   <ion-footer>
       <ion-toolbar color="primary">
-          <ion-buttons start>
+        <!-- If the User is Login it will show the Logout button -->
+          <mat-list-item *ngIf="isAuth">
+            <ion-buttons start>
               <button ion-button (click)="openLogout()">Logout</button>  
             </ion-buttons>
-    
+          </mat-list-item>
+        <!-- If the USer is NOT Log in -->
+        <mat-list-item *ngIf="!isAuth">
+            <ion-buttons start>
+              <button ion-button (click)="openLogIn()">Login</button>  
+            </ion-buttons>
+          </mat-list-item>
+
         <ion-buttons end>
             <button ion-button  (click)="openFavorite()">
                 <ion-icon name="heart-outline"></ion-icon></button>
