@@ -7,6 +7,7 @@ import { FavoritePage } from './../favorite/favorite';
 import { SettingsPage } from './../settings/settings';
 import { LogoutPage } from './../logout/logout';
 import { HomePage } from './../home/home';
+
 @IonicPage()
 @Component({
   selector: 'page-newinventory',
@@ -37,7 +38,7 @@ openSettings() {
   let modal = this.modalCtrl.create(SettingsPage);
   modal.present();
 }
-// opens Settings Page
+// opens Logout Page
 openLogout() {
   let modal = this.modalCtrl.create(LogoutPage);
   modal.present();

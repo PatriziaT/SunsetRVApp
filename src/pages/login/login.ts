@@ -6,6 +6,7 @@ import { Storage } from '@ionic/storage';
 import { User } from '../../shared/user';
 
 import { RegisterPage } from '../register/register';
+import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
@@ -58,7 +59,8 @@ this.loginForm = this.formBuilder.group({
     console.log('ionViewDidLoad LoginPage');
   }
   dismiss() {
-    this.viewCtrl.dismiss();
+    // this.viewCtrl.dismiss(); this is if i keep it the other way
+    this.navCtrl.setRoot(HomePage);
   }
 
   onSubmit() {
