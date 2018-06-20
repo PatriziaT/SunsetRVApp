@@ -8,6 +8,7 @@ import { Subscription } from 'rxjs/Subscription';
 import { FavoritePage } from './../favorite/favorite';
 import { SettingsPage } from './../settings/settings';
 import { HomePage } from './../home/home';
+import { LoginPage } from '../login/login';
 @IonicPage()
 @Component({
   selector: 'page-specials',
@@ -41,18 +42,8 @@ export class SpecialsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SpecialsPage');
-    //Need to subscribe to the authStatus I do? thats firebase? 
-    //only inside the app to pass data around oh
-    // now it will ask for the data to see if user is login
-    
-    this.authSubscription = this.authService.authChange.subscribe(authStatus => {
-      this.isAuth = authStatus;
-    });
-    //based on that piece of code above?
-    //yes it ask the auth Status if true   then we are login, if not it will show other data now.above
-    //no it has a runtime err 
-// save
-// can to git so i can pull it to my pc ok give a sec
+  
+   
   }
  // opens Favorite Page
  openFavorite() {
@@ -69,7 +60,10 @@ openSettings() {
   dismiss() {
     this.navCtrl.setRoot(HomePage);
 }
-
+  onLogIN(){
+      let modal = this.modalCtrl.create(LoginPage);
+  modal.present();
+  }
   onLogout() {
     this.authService.logout();
   }

@@ -5,7 +5,7 @@
                 <ion-icon name="arrow-back"></ion-icon>
             </button>
         </ion-buttons>
-    <ion-title>Used RVs</ion-title>
+    <ion-title>Used Trucks</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -16,18 +16,15 @@
   <ion-footer>
       <ion-toolbar color="primary">
         <!-- If the User is Login it will show the Logout button -->
-          <mat-list-item *ngIf="isAuth">
-            <ion-buttons start>
-              <button ion-button (click)="openLogout()">Logout</button>  
+            <ion-buttons start *ngIf="isAuth">
+              <button ion-button (click)="onLogout()">Logout</button>  
             </ion-buttons>
-          </mat-list-item>
         <!-- If the USer is NOT Log in -->
-        <mat-list-item *ngIf="!isAuth">
-            <ion-buttons start>
-              <button ion-button (click)="openLogIn()">Login</button>  
-            </ion-buttons>
-          </mat-list-item>
-
+                <ion-buttons start *ngIf="!isAuth">
+                    <button ion-button (click)="onLogIN()">
+                        <ion-icon name="log-in"></ion-icon></button>
+                  </ion-buttons>
+        
         <ion-buttons end>
             <button ion-button  (click)="openFavorite()">
                 <ion-icon name="heart-outline"></ion-icon></button>

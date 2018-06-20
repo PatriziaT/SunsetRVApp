@@ -29,6 +29,7 @@ import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-htt
 import { RVsProvider } from '../providers/rvsdata/rvsdata';
 import { UserProvider } from '../providers/user/user';
 
+import { AuthService } from '../shared/auth.service';
 import { baseURL } from '../shared/baseurl';
 import { NewRvProvider } from '../providers/new-rv/new-rv';
 
@@ -76,6 +77,7 @@ import { NewRvProvider } from '../providers/new-rv/new-rv';
     RVsProvider,
     UserProvider,
     NewRvProvider,
+    AuthService
     // AngularFireAuth
   ]
 })

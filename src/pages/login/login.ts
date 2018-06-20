@@ -65,6 +65,7 @@ this.loginForm = this.formBuilder.group({
     console.log(this.loginForm.value, this.user);
     this.user.username = this.loginForm.get('username').value;
     this.user.password = this.loginForm.get('password').value;
+    
     console.log(this.user);
     if(this.loginForm.get('remember').value)
       this.storage.set('user', this.user)
