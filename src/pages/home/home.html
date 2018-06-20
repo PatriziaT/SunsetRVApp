@@ -25,8 +25,12 @@
       </ion-buttons>
   
       <ion-buttons end>
-          <button ion-button  (click)="openFavorite()">
-              <ion-icon name="heart-outline"></ion-icon></button>
+          <!-- <button ion-button  (click)="openFavorite()">-->
+
+            <!-- open sign in in order to be able to save favorites -->
+              <button ion-button block (click)="openLogin()">
+              <ion-icon name="heart-outline"></ion-icon></button> 
+
           <button ion-button  (click)="openSettings()">
                   <ion-icon name="settings"></ion-icon></button>
       </ion-buttons>
