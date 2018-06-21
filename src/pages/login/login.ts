@@ -73,7 +73,8 @@ this.loginForm = this.formBuilder.group({
       this.storage.set('user', this.user)
     else
       this.storage.remove('user');
-    this.viewCtrl.dismiss();
+    // this.viewCtrl.dismiss();
+    this.dismiss();
   }
  
 }

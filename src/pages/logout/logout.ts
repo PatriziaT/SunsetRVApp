@@ -3,13 +3,10 @@ import { IonicPage, NavController, NavParams, ViewController, ModalController  }
 
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { Storage } from '@ionic/storage';
-// import { User } from '../../shared/user';
+import { User } from '../../shared/user';
 
-// import { HomePage } from '../home/home';
-// import { NewinventoryPage } from '../newinventory/newinventory';
-// import { SpecialsPage } from '../specials/specials';
-// import { SettingsPage } from '../settings/settings';
-// import { FavoritePage } from '../favorite/favorite';
+import { RegisterPage } from '../register/register';
+import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
@@ -18,29 +15,64 @@ import { Storage } from '@ionic/storage';
 })
 export class LogoutPage {
 
+  loginForm: FormGroup;
+  user = {} as User;
+  
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     public viewCtrl: ViewController,
-    // private formBuilder: FormBuilder,
-    // private storage: Storage,
-    // private modalCtrl: ModalController
-  ) {
+    private formBuilder: FormBuilder,
+    private storage: Storage,
+    private modalCtrl: ModalController) {
+
+      storage.get('user').then(user => {
+        if (user) {
+          console.log(user);
+          this.user = user;
+          this.loginForm
+            .patchValue({
+              'username': this.user.username, 
+              'password': this.user.password 
+            });
   }
+    else
+    console.log('user not defined');
+});
+  
+this.loginForm = this.formBuilder.group({
+  username: ['', Validators.required],
+  password: ['',Validators.required],
+  remember: true
+});
 
-  //     storage.get('user').then(user => {
-  //       if (user) {
-  //         console.log(user);
-  //         this.user = user;
-  //       }
-           
-  // }
-  //   else
-  //   console.log('user not defined');
-// });
-
+    }
+    openRegister() {
+      let modal = this.modalCtrl.create(RegisterPage);
+      modal.present();
+      modal.onDidDismiss(() => this.dismiss())
+    }
+    
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LogoutPage');
+    console.log('ionViewDidLoad LoginPage');
+  }
+  dismiss() {
+    // this.viewCtrl.dismiss(); this is if i keep it the other way
+    this.navCtrl.setRoot(HomePage);
   }
 
+  onSubmit() {
+    console.log(this.loginForm.value, this.user);
+    this.user.username = this.loginForm.get('username').value;
+    this.user.password = this.loginForm.get('password').value;
+    
+    console.log(this.user);
+    if(this.loginForm.get('remember').value)
+      this.storage.set('user', this.user)
+    else
+      this.storage.remove('user');
+    // this.viewCtrl.dismiss();
+    this.dismiss();
+  }
+ 
 }

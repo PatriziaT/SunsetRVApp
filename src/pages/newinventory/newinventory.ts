@@ -23,10 +23,7 @@ export class NewinventoryPage {
     private modalCtrl: ModalController) {
   }
 
-  // ionViewDidLoad() {
-  //   console.log('ionViewDidLoad NewinventoryPage');
-  // }
-//it works on both now
+
  // opens Favorite Page
  openFavorite() {
   let modal = this.modalCtrl.create(FavoritePage);

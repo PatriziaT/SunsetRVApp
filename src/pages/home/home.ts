@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController , ViewController} from 'ionic-angular';
+import { NavController, NavParams, ModalController , ViewController} from 'ionic-angular';
 // import { RVs } from '../../shared/rvs';
 // import { RVsProvider } from '../../providers/rvsdata/rvsdata';
 
@@ -9,7 +9,7 @@ import { SettingsPage } from './../settings/settings';
 
 //import firebase from 'firebase';
 
-@IonicPage()
+// @IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
