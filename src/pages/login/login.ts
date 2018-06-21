@@ -55,14 +55,6 @@ this.loginForm = this.formBuilder.group({
       modal.onDidDismiss(() => this.dismiss())
     }
     
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
-  dismiss() {
-    // this.viewCtrl.dismiss(); this is if i keep it the other way
-    this.navCtrl.setRoot(HomePage);
-  }
-
   onSubmit() {
     console.log(this.loginForm.value, this.user);
     this.user.username = this.loginForm.get('username').value;
@@ -76,5 +68,11 @@ this.loginForm = this.formBuilder.group({
     // this.viewCtrl.dismiss();
     this.dismiss();
   }
- 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad LoginPage');
+  }
+  dismiss() {
+    // this.viewCtrl.dismiss(); this is if i keep it the other way
+    this.navCtrl.setRoot(HomePage);
+  }
 }

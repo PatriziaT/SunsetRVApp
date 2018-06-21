@@ -52,16 +52,11 @@ export class RegisterPage {
           this.dismiss();
         }
         
-       //waiting to try and get result back from firebase
-  // register(){
-  //   console.log(this.user);
-  //   try {
-  //     const result =  this.aFAuth.auth.createUserWithEmailAndPassword(this.user.username, this.user.password);
-  //     console.log(result);
-  //   }
-  //   catch (err) {
-  //     console.log(err);
-  //   }
-  // }
+       
       }
- 
+ //***CHECK LATER IF THIS IS BETTER?? */
+// it can also be written as
+// signup() {
+//   //api connection
+//   this.navCtrl.push(TabsPage);
+// }

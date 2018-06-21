@@ -5,7 +5,7 @@
         <button ion-button icon-only (click)="dismiss()">
           <ion-icon name="close"></ion-icon></button>
       </ion-buttons>   
-      <ion-title>Register</ion-title>
+      <ion-title>SIGNUP</ion-title>
     </ion-toolbar>
   
   </ion-header>
@@ -25,15 +25,7 @@
       </ion-grid> -->
     <!-- </ion-card>
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-      <ion-item>
-        <ion-label floating>First Name</ion-label>
-        <ion-input type="text" formControlName="firstname"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label floating>Last Name</ion-label>
-        <ion-input type="text" formControlName="lastname"></ion-input>
-      </ion-item>
-      <ion-item>
+      
         <ion-label floating>Username</ion-label>
         <ion-input type="text" formControlName="username"></ion-input>
       </ion-item>
@@ -53,16 +45,24 @@
     </form>
   </ion-content> -->
 
-  <!-- testing it out -->
+
   <ion-content>
       <ion-item>
-        <ion-label floating>Username</ion-label>
-        <ion-input type="text" [(ngModel)]="user.username"></ion-input>
+          <ion-input type="text" placeholder="Name" [(ngModel)]="user.name"></ion-input>
+       </ion-item>
+      <ion-item>
+          <ion-input type="password" placeholder="Lastname" [(ngModel)]="user.lastname"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label floating>Password</ion-label>
-        <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+         <ion-input type="email" placeholder="Email" [(ngModel)]="user.email"></ion-input>
       </ion-item>
-      <button ion-button (click)="onSubmit(user)">Register</button>
+          <ion-item>
+      <ion-input type="text" placeholder="Username" [(ngModel)]="user.username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Password" [(ngModel)]="user.password"></ion-input>
+      </ion-item>
+      
+      <ion-grid><button ion-button block (click)="onSubmit(user)">SIGNUP</button></ion-grid>
     </ion-content>
 

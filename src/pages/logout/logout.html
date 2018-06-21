@@ -2,17 +2,22 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Logged Out</ion-title>
+    <ion-title>LOGGED OUT</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
-   
-    <ion-thumbnail name="logo">
+  <ion-grid><ion-row>
+  <ion-col>
+       
+   <img class="logo" height="150" width="150" src="assets/images/Logo.png">
+    <!-- <ion-thumbnail name="logo">
         <img width="125" height="100" src="assets/images/Logo.png" />
-      </ion-thumbnail>
-
+      </ion-thumbnail> -->
+    </ion-col>
+    </ion-row>
+  </ion-grid>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <ion-item>
           <ion-label floating>Email</ion-label>
@@ -24,31 +29,17 @@
         </ion-item> 
 
         <!-- need more space in between but how? -->
-        <ion-grid><button ion-button block (click)="onSubmit()">Sign In</button>
+        <ion-grid><button ion-button block (click)="onSubmit()">LOGIN</button>
           
           <!-- need this centered and smaller font -->
-        <ion-label center>(Forgot your Password?)</ion-label></ion-grid>
+        <ion-label align="center">(Forgot your Password?)</ion-label></ion-grid>
     
-        <ion-item> 
-          <!-- this is way to large should be small -->
-          <ion-label>Remember Me</ion-label>
-          <ion-checkbox color="primary" formControlName="remember" checked="true"></ion-checkbox>
-        </ion-item> 
-
-        <!-- need to center and push down further -->
-        <ion-grid>
-          <p>Do not have an account?</p> 
-        <!-- why is button looking different?-->
-        <button iion-button block (click)="openRegister()">Sign Up</button></ion-grid>
+        
       </form>
 </ion-content>
 
 <ion-footer>
     <ion-toolbar color="primary">
   
-      <ion-buttons end>
-          <button ion-button  (click)="openSettings()">
-                  <ion-icon name="settings"></ion-icon></button>
-      </ion-buttons>
     </ion-toolbar>
   </ion-footer>

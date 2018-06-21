@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController  } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, ViewController } from 'ionic-angular';
 import { SpecialsProvider } from '../../providers/specialsdata/specialsdata';
 
 import { AuthService } from '../../shared/auth.service';
@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs/Subscription';
 import { FavoritePage } from './../favorite/favorite';
 import { SettingsPage } from './../settings/settings';
 import { HomePage } from './../home/home';
-import { LoginPage } from '../login/login';
+import { LogoutPage } from './../logout/logout';
 @IonicPage()
 @Component({
   selector: 'page-specials',
@@ -25,6 +25,7 @@ export class SpecialsPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
+    public viewCtrl: ViewController,
     public specialsData: SpecialsProvider,
     private modalCtrl: ModalController,
     private authService: AuthService) {
@@ -40,12 +41,7 @@ export class SpecialsPage {
   // }
 
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SpecialsPage');
-  
-   
-  }
- // opens Favorite Page
+  // opens Favorite Page
  openFavorite() {
   let modal = this.modalCtrl.create(FavoritePage);
   modal.present();
@@ -56,15 +52,19 @@ openSettings() {
   let modal = this.modalCtrl.create(SettingsPage);
   modal.present();
 }
+// opens Logout Page
+openLogout() {
+  let modal = this.modalCtrl.create(LogoutPage);
+  modal.present();
+}
 //Dismiss the window back to Root Home
   dismiss() {
     this.navCtrl.setRoot(HomePage);
 }
-  onLogIN(){
-      let modal = this.modalCtrl.create(LoginPage);
-  modal.present();
-  }
-  onLogout() {
-    this.authService.logout();
-  }
 }
+
+
+//   onLogout() {
+//     this.authService.logout();
+//   }
+// }
