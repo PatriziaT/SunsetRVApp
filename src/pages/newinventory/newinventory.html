@@ -5,7 +5,7 @@
                         <ion-icon name="arrow-back"></ion-icon>
                     </button>
                 </ion-buttons>
-    <ion-title>New Trucks</ion-title>
+    <ion-title>New RVs</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -13,17 +13,17 @@
     <div class="container" fxlayout="column" fxlayoutgap="10px">
 
         <!-- <md-list fxflex="">
-          <md-list-item *ngFor="let newinven of newinvens">
-            <img md-list-avatar="" src="{{newinven.image}}" alt="{{newinven.name}}">
-            <h1 md-line=""> {{newinven.name}} </h1>
+          <md-list-item *ngFor="let rv of rvs">
+            <img md-list-avatar="" src="{{rv.image}}" alt="{{rv.name}}">
+            <h1 md-line=""> {{rv.name}} </h1>
             <p md-line="">
-                <span> {{newinven.stocknumber}} </span>
+                <span> {{rv.stocknumber}} </span>
               </p>
             <p md-line="">
-              <span> {{newinven.description}} </span>
+              <span> {{rv.description}} </span>
             </p>
             <p md-line="">
-                <span> {{newinven.vin}} </span>
+                <span> {{rv.vin}} </span>
               </p>
           </md-list-item>
 

@@ -1,10 +1,10 @@
-export class newinven {
-    id: number;
+export class RV {
+    
     name: string;
     stocknumber: number;
     image: string;
     category: string;
-    price: string;
+    price: number;
     description: string;
     condition: string;
     vin: number;

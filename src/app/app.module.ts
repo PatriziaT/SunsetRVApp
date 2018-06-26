@@ -27,11 +27,12 @@ import { FavoritesProvider } from '../providers/favorites/favorites';
 import { SpecialsProvider } from '../providers/specialsdata/specialsdata';
 import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-httpmsg';
 import { UserProvider } from '../providers/user/user';
-import { NewRvProvider } from '../providers/new-rv/new-rv';
-// import { RvProvider } from '../providers/rvsdata/rvsdata';
+
+import { NewinventoryProvider } from '../providers/newinventory/newinventory';
 
 import { AuthService } from '../shared/auth.service';
 import { baseURL } from '../shared/baseurl';
+
 
 
 @NgModule({ 
@@ -76,8 +77,9 @@ import { baseURL } from '../shared/baseurl';
     { provide: 'BaseURL', useValue: baseURL },
     SpecialsProvider,
     UserProvider,
-    NewRvProvider,
-    AuthService
+    NewinventoryProvider,
+    AuthService,
+
     // AngularFireAuth
   ]
 })

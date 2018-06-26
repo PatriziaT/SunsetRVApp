@@ -6,7 +6,7 @@ import { NavController, NavParams, ModalController , ViewController} from 'ionic
 import { LogoutPage } from './../logout/logout';
 import { FavoritePage } from './../favorite/favorite';
 import { SettingsPage } from './../settings/settings';
-import { newinven } from '../../shared/newinven';
+import { RV } from '../../shared/rv';
 
 //import firebase from 'firebase';
 
@@ -18,7 +18,7 @@ import { newinven } from '../../shared/newinven';
 
 export class HomePage {
   
-    rvs: newinven;
+    rvs: RV;
     errorMessage: string;
   
 

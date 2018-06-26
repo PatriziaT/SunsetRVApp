@@ -1,28 +1,36 @@
-import { Component, } from '@angular/core';
+import { Component, Inject} from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController, ModalController  } from 'ionic-angular';
 
 import { FavoritePage } from './../favorite/favorite';
 import { SettingsPage } from './../settings/settings';
 import { LogoutPage } from './../logout/logout';
 import { HomePage } from './../home/home';
-import { NewInven } from '../../shared/newinven';
+import { RV } from '../../shared/rv';
 
 @IonicPage()
 @Component({
   selector: 'page-newinventory',
   templateUrl: 'newinventory.html',
 })
-export class NewinventoryPage {
 
-  constructor(
+export class NewinventoryPage{
+
+  // rv: RV;
+  favorite: boolean;
+  actinsheet: boolean;
+
+  // selectedRv = RV[0];
+
+  constructor(@Inject('BaseURL') private BaseURL,
     public navCtrl: NavController, 
     public navParams: NavParams,
     public viewCtrl: ViewController,
     private modalCtrl: ModalController) {
   }
 
-  rvs: NewinventoryPage[] = [
+  rvs: RV = [
     {
+      
       name:'2019 Wolf Pack - 295PACK13',
       stocknumber: 'CHE32',
       image: '/assets/images/WolfPack.jpg',
@@ -64,8 +72,6 @@ export class NewinventoryPage {
       vin: '4X4TSKC21KE081638'
     }
    ];
-
-
 
  // opens Favorite Page
  openFavorite() {

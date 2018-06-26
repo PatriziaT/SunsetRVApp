@@ -33,8 +33,8 @@ export class MyApp {
     this.pages = [
   
       { title: 'Home', component: HomePage },
-      { title: 'Used Trucks', component: SpecialsPage }, 
-      { title: 'New Trucks', component: NewinventoryPage }
+      { title: 'Used RVs', component: SpecialsPage }, 
+      { title: 'New RVs', component: NewinventoryPage }
       
     ];
 
