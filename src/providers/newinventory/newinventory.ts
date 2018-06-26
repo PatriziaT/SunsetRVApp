@@ -4,7 +4,7 @@ import { RV } from '../../shared/rv';
 
 import { Http, Response } from '@angular/http';
 import { baseURL } from '../../shared/baseurl';
-import { Restangular } from 'ngx-restangular';
+// import { Restangular } from 'ngx-restangular';
 import { Observable } from 'rxjs/Observable';
 import { ProcessHttpmsgProvider } from '../process-httpmsg/process-httpmsg';
 import 'rxjs/add/operator/delay';
@@ -18,12 +18,12 @@ export class NewinventoryProvider {
   constructor(public http: Http,
     // private restangularmodule: RestangularModule,
     private processHTTPMsgService: ProcessHttpmsgProvider,
-    private restangular: Restangular,
+    // private restangular: Restangular,
 
   ) { }
 // copied from ionic
 
-getDishes(): Observable<RV[]> {
+getRVs(): Observable<RV[]> {
   return this.http.get(baseURL + 'rvs')
                   .map(res => { return this.processHTTPMsgService.extractData(res); })
                   .catch(error => { return this.processHTTPMsgService.handleError(error); });

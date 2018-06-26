@@ -1,5 +1,6 @@
-export class RV {
+export interface RV {
     
+    id: number;
     name: string;
     stocknumber: number;
     image: string;
