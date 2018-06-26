@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController , ViewController} from 'ionic-angular';
-// import { RVs } from '../../shared/rvs';
+
 // import { RVsProvider } from '../../providers/rvsdata/rvsdata';
 
 import { LogoutPage } from './../logout/logout';
 import { FavoritePage } from './../favorite/favorite';
 import { SettingsPage } from './../settings/settings';
+import { newinven } from '../../shared/newinven';
 
 //import firebase from 'firebase';
 
@@ -17,8 +18,8 @@ import { SettingsPage } from './../settings/settings';
 
 export class HomePage {
   
-    // rvs: RVs;
-    // errorMessage: string;
+    rvs: newinven;
+    errorMessage: string;
   
 
     constructor(

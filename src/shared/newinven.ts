@@ -1,10 +1,13 @@
-export interface RVs {
+export class newinven {
     id: number;
     name: string;
+    stocknumber: number;
     image: string;
     category: string;
-    label: string;
     price: string;
-    featured: boolean;
     description: string;
+    condition: string;
+    vin: number;
 }
+
+// export interface RVs

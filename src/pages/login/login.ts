@@ -16,8 +16,8 @@ import { HomePage } from '../home/home';
 export class LoginPage {
 
   loginForm: FormGroup;
-  user = {} as User;
-  // user: User = {username: '', password: ''};
+  // user = {} as User;
+  user: User = {username: '', password: ''};
 
 
   constructor(
@@ -65,8 +65,8 @@ this.loginForm = this.formBuilder.group({
       this.storage.set('user', this.user)
     else
       this.storage.remove('user');
-    // this.viewCtrl.dismiss();
-    this.dismiss();
+      this.viewCtrl.dismiss();
+      // this.dismiss();
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');

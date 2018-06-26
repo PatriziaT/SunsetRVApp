@@ -26,12 +26,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { FavoritesProvider } from '../providers/favorites/favorites';
 import { SpecialsProvider } from '../providers/specialsdata/specialsdata';
 import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-httpmsg';
-import { RVsProvider } from '../providers/rvsdata/rvsdata';
 import { UserProvider } from '../providers/user/user';
+import { NewRvProvider } from '../providers/new-rv/new-rv';
+// import { RvProvider } from '../providers/rvsdata/rvsdata';
 
 import { AuthService } from '../shared/auth.service';
 import { baseURL } from '../shared/baseurl';
-import { NewRvProvider } from '../providers/new-rv/new-rv';
+
 
 @NgModule({ 
   declarations: [
@@ -74,7 +75,6 @@ import { NewRvProvider } from '../providers/new-rv/new-rv';
     ProcessHttpmsgProvider,
     { provide: 'BaseURL', useValue: baseURL },
     SpecialsProvider,
-    RVsProvider,
     UserProvider,
     NewRvProvider,
     AuthService

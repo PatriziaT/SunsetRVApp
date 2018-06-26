@@ -9,7 +9,6 @@ export class UserProvider {
 
   user = {} as User;
 
-
   constructor(
     // private aFAuth: AngularFireAuth,
     public http: HttpClientModule) {

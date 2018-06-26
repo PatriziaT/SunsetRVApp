@@ -7,9 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { SpecialsPage } from '../pages/specials/specials';
 import { NewinventoryPage } from '../pages/newinventory/newinventory';
 import { LoginPage } from '../pages/login/login';
-// import { LogoutPage } from '../pages/logout/logout';
-//import { ListPage } from '../pages/list/list';
-// import { FavoritePage } from '../pages/favorite/favorite';
+
 
 
 @Component({
