@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController, ActionSheetController } from 'ionic-angular';
 
 import { RV } from '../../shared/rv';
-
 import { FavoritesProvider } from '../../providers/favorites/favorites';
 
 @IonicPage()
@@ -27,7 +26,7 @@ export class RvdetailPage {
 
       this.rv = navParams.get('rv');
       this.favorite = favoritesservice.isFavorite(this.rv.id);
-      // let total = 0;
+      // let total = 0; DOES NOT WORK
   
   }
 

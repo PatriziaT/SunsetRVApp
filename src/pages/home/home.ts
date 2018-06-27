@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { NavController, NavParams, ModalController , ViewController} from 'ionic-angular';
 
-// import { RVsProvider } from '../../providers/rvsdata/rvsdata';
+import { RV } from '../../shared/rv';
+import { NewinventoryProvider } from '../../providers/newinventory/newinventory';
+
+import { Promotion } from '../../shared/promotion';
+import { PromotionProvider } from '../../providers/promotion/promotion';
 
 import { LogoutPage } from './../logout/logout';
 import { FavoritePage } from './../favorite/favorite';
 import { SettingsPage } from './../settings/settings';
-import { RV } from '../../shared/rv';
 
-//import firebase from 'firebase';
 
 // @IonicPage()
 @Component({
@@ -18,18 +20,30 @@ import { RV } from '../../shared/rv';
 
 export class HomePage {
   
-    rvs: RV;
-    errorMessage: string;
+    rv: RV;
+    promotion: Promotion;
+    rverrMess: string;
+    promoErrMess: string;
   
 
     constructor(
       public navCtrl: NavController,
       public navParams: NavParams,
-      // public rvsservice: RVsProvider,
       public viewCtrl: ViewController,
-      public modalCtrl: ModalController) {
+      public modalCtrl: ModalController,
+      private rvservice: NewinventoryProvider,
+      private promotionservice: PromotionProvider
+    ) {}
 
-      }
+    ngOnInit() {
+      this.rvservice.getFeaturedRV()
+         .subscribe(rv => this.rv = rv,
+          errmess => this.rverrMess = <any>errmess );
+      this.promotionservice.getFeaturedPromotion()
+        .subscribe(promotion => this.promotion = promotion,
+          errmess => this.promoErrMess = <any>errmess );
+      
+    }
 
      // opens Logout Page
   openLogout() {
@@ -50,52 +64,4 @@ export class HomePage {
     }
   }
 
-      // createPerson(firstName: string, lastName: string): void {
-      //   const personRef: firebase.database.Reference = firebase.database().ref(`/person1/`);
-      //   personRef.set({
-      //     firstName,
-      //     lastName
-      //   })
-      // }
-
-      // updatePerson(firstName: string, lastName: string): void {
-      //     const personRef: firebase.database.Reference = firebase.database().ref(`/person1/`);
-      //     personRef.update({
-      //       firstName,
-      //       lastName
-      //     })
-      // }
-      // updatePerson(): void {
-      //   const personRef: firebase.database.Reference = firebase.database().ref(`/person1/`);
-      //   personRef.remove()
-      // })
-    // }
-
-    // ionViewDidLoad() {
-    //   console.log('ionViewDidLoad SpecialsPage');
-    // }
-    // ionViewDidLoad() ;{
-    //   const personRef: firebase.database.Reference = firebase.database().ref(`/person1/`);
-    //   personRef.on('value', personSnapshot => {
-    //     myPerson = personSnapshot.val();
-    //   });
-      //}
-
-      // getRVs() {
-      //   this.rvs.getRVs()
-      //      .subscribe(
-      //        rvs => this.rvs = rvs,
-      //        error =>  this.errorMessage = <any>error);
-      // }
-    
-    //@Inject('BaseURL') public BaseURL) { }
-  
-    //ngOnInit() {
-    //   this.rvsservice.getFeaturedRVs()
-    //      .subscribe(rvs => this.rvs = rvs,
-    //       errmess => this.errorMessage = <any>errmess );
-     
-  
-    // }
-    
-  
+      

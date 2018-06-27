@@ -9,11 +9,57 @@
   </ion-navbar>  
 </ion-header>
 
+<ion-content>
+  <ion-card *ngIf="rv">
+    <img src="{{BaseURL + rv.image}}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{rv.name | uppercase}}
+      </ion-card-title>
+      <p>
+        {{rv.description}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+  <div [hidden]="rv || rvErrMess">
+    <ion-spinner></ion-spinner>
+    <h4>Loading . . . Please Wait</h4>
+  </div>
+  <div *ngIf="rvErrMess">
+    <h2>Error</h2>
+    <h4>{{rvErrMess}}</h4>
+  </div>
+    
+  <ion-card *ngIf="promotion">
+    <img src="{{BaseURL + promotion.image}}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{promotion.name | uppercase}}
+      </ion-card-title>
+      <p>
+        {{promotion.description}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+  <div [hidden]="promotion || promoErrMess">
+    <ion-spinner></ion-spinner>
+    <h4>Loading . . . Please Wait</h4>
+  </div>
+  <div *ngIf="promoErrMess">
+    <h2>Error</h2>
+    <h4>{{promoErrMess}}</h4>
+  </div>
+  
+  
+  </ion-content>
 
-<ion-content padding> 
-  <ion-searchbar [(ngModel)]="terms"></ion-searchbar>
+
+  <!-- inital set up  -->
+  <!-- if the upper one doesnt work use this one -->
+<!-- <ion-content padding> 
+  <ion-searchbar [(ngModel)]="terms"></ion-searchbar> -->
   <!-- <button ion-button type="button" (click)="sort()">Sort</button>  -->
- </ion-content>
+ <!-- </ion-content>
 <ion-footer>
     <ion-toolbar color="primary">
      <ion-buttons start>
@@ -29,47 +75,6 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-footer>  
-
-
-  <!-- <ion-tabs>
-      <ion-tab [root]="specialsRoot" tabTitle="RV-Specials" tabIcon="chat"></ion-tab>
-     </ion-tabs>
-
-
-  <button ion-button secondary menuToggle>Click for Menu</button>
-  
-</ion-content>
-
-  <ion-grid> 
-      <ion-row align-items-center> 
-        <ion-col col-12 col-lg-4> 
-  <ion-card *ngIf="rvs">
-    <img src="{{BaseURL + rvs.image}}"/>
-    <ion-card-content>
-      <ion-card-title>
-        {{rvs.name | uppercase}}
-      </ion-card-title>
-      <p>
-        {{rvs.description}}
-      </p>
-    </ion-card-content>
-  </ion-card>
-        </ion-col>
-      </ion-row>
-  </ion-grid>
-
-
-
-  <div [hidden]="rvs || rvsErrMess">
-    <ion-spinner></ion-spinner>
-    <h4>Loading . . . driving off the lot</h4>
-  </div>
-  <div *ngIf="rvsErrMess">
-    <h2>Error</h2>
-    <h4>{{rvsErrMess}}</h4>
-  </div>  -->
+ -->
 
   
-
-
-    

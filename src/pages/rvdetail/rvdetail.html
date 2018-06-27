@@ -8,3 +8,31 @@
       </ion-buttons>   
   </ion-navbar>
 </ion-header>
+
+<!-- try out -->
+<ion-content padding>
+  <ion-card *ngIf="rv">
+    <img src="{{BaseURL + rv.image}}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{rv.name | uppercase}}
+      </ion-card-title>
+      <p>
+        {{rv.description}}
+      </p>
+    </ion-card-content>
+    <ion-row>
+      
+    </ion-row>
+  </ion-card>
+  <div [hidden]="rv || errMess">
+    <ion-spinner></ion-spinner>
+    <h4>Loading . . . Please Wait</h4>
+  </div>
+  <div *ngIf="errMess">
+    <h2>Error</h2>
+    <h4>{{errMess}}</h4>
+  </div>
+  
+
+  </ion-content>

@@ -32,6 +32,7 @@ import { NewinventoryProvider } from '../providers/newinventory/newinventory';
 
 import { AuthService } from '../shared/auth.service';
 import { baseURL } from '../shared/baseurl';
+import { PromotionProvider } from '../providers/promotion/promotion';
 
 
 
@@ -79,6 +80,7 @@ import { baseURL } from '../shared/baseurl';
     UserProvider,
     NewinventoryProvider,
     AuthService,
+    PromotionProvider,
 
     // AngularFireAuth
   ]
