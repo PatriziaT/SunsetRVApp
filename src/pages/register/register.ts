@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams, ViewController} from 'ionic-angula
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 
 import { UserProvider } from '../../providers/user/user'
-import { User } from '../../shared/user';
+// import { User } from '../../shared/user';
 
 
 // import { AngularFireAuth } from 'angularfire2/auth';
@@ -18,14 +18,14 @@ export class RegisterPage {
   image: string = 'assets/imgs/logo.png';
   imageUri: string;
 
-  user = {} as User;
+  // user = {} as User;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     private viewCtrl: ViewController,
     private formBuilder: FormBuilder,
-    public userProvider: UserProvider,
+    // public userProvider: UserProvider,
     // private aFAuth: AngularFireAuth
   ) {
   
@@ -54,9 +54,3 @@ export class RegisterPage {
         
        
       }
- //***CHECK LATER IF THIS IS BETTER?? */
-// it can also be written as
-// signup() {
-//   //api connection
-//   this.navCtrl.push(TabsPage);
-// }

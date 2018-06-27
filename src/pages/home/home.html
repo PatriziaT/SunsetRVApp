@@ -17,27 +17,20 @@
   <ion-searchbar [(ngModel)]="terms"></ion-searchbar>
   <!-- <button ion-button type="button" (click)="sort()">Sort</button>  -->
 
-  <ion-grid>
+  <!-- <ion-grid>
       <ion-row align-items-center>
           <ion-col col-12 col-lg-4 *ngFor="let rv of rvs">
               <ion-card (click)="rvelected($event, rv)" (pan)="addToFavorites(rv)">
                 <img src="{{BaseURL + rv.image}}" />
                 <div class="card-title">{{ rv.name }}</div>
-                <div class="card-subtitle">{{ rvdescription }}</div>
+                <div class="card-subtitle">{{ rv.description }}</div>
               </ion-card>
         </ion-col>
       </ion-row>
   </ion-grid>
   <div [hidden]="rv || rvErrMess"></div>
 
- </ion-content>
-
-
-
-
-
-
-
+ </ion-content> -->
 
 
 <ion-footer>
@@ -59,7 +52,7 @@
 
   <!-- try out -->
 
-  <!-- <ion-card *ngIf="rv">
+  <ion-card *ngIf="rv">
     <img src="{{BaseURL + rv.image}}"/>
     <ion-card-content>
       <ion-card-title>
@@ -94,7 +87,7 @@
   <div *ngIf="promoErrMess">
     <h2>Error</h2>
     <h4>{{promoErrMess}}</h4>
-  </div> -->
+  </div>
 
   </ion-content>
 

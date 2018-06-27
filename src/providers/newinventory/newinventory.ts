@@ -4,7 +4,7 @@
 import { Injectable } from '@angular/core';
 import { RV } from '../../shared/rv';
 import { Observable } from 'rxjs/Observable';
-import { Http, Response } from '@angular/http';
+import { Http } from '@angular/http';
 import { baseURL } from '../../shared/baseurl';
 import { ProcessHttpmsgProvider } from '../process-httpmsg/process-httpmsg';
 
@@ -25,19 +25,19 @@ export class NewinventoryProvider {
 getRVs(): Observable<RV[]> {
   return this.http.get(baseURL + 'rvs')
                   .map(res => { return this.processHTTPMsgService.extractData(res); })
-                  .catch(error => { return this.processHTTPMsgService.handleError(error); });
+                  // .catch(error => { return this.processHTTPMsgService.handleError(error); });
 }
 
 getRV(id: number): Observable<RV> {
   return  this.http.get(baseURL + 'rvs/'+ id)
                   .map(res => { return this.processHTTPMsgService.extractData(res); })
-                  .catch(error => { return this.processHTTPMsgService.handleError(error); });
+                  // .catch(error => { return this.processHTTPMsgService.handleError(error); });
 }
 
 getFeaturedRV(): Observable<RV> {
   return this.http.get(baseURL + 'rvs?featured=true')
                   .map(res => { return this.processHTTPMsgService.extractData(res)[0]; })
-                  .catch(error => { return this.processHTTPMsgService.handleError(error); });
+                  // .catch(error => { return this.processHTTPMsgService.handleError(error); });
 }
 
 }

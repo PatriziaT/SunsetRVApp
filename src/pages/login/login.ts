@@ -8,6 +8,7 @@ import { User } from '../../shared/user';
 import { RegisterPage } from '../register/register';
 import { HomePage } from '../home/home';
 
+// import { AuthService } from '../../shared/auth.service';
 @IonicPage()
 @Component({
   selector: 'page-login',
@@ -16,9 +17,8 @@ import { HomePage } from '../home/home';
 export class LoginPage {
 
   loginForm: FormGroup;
-  // user = {} as User;
   user: User = {username: '', password: ''};
-
+  loginError: string;
 
   constructor(
     public navCtrl: NavController, 
@@ -26,7 +26,9 @@ export class LoginPage {
     public viewCtrl: ViewController,
     private formBuilder: FormBuilder,
     private storage: Storage,
-    private modalCtrl: ModalController) {
+    private modalCtrl: ModalController,
+    // private authservice: AuthService,
+  ) {
 
       storage.get('user').then(user => {
         if (user) {
@@ -55,6 +57,14 @@ this.loginForm = this.formBuilder.group({
       modal.onDidDismiss(() => this.dismiss())
     }
     
+ 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad LoginPage');
+  }
+  dismiss() {
+    // this.viewCtrl.dismiss(); this is if i keep it the other way
+    this.navCtrl.setRoot(HomePage);
+  }
   onSubmit() {
     console.log(this.loginForm.value, this.user);
     this.user.username = this.loginForm.get('username').value;
@@ -65,14 +75,10 @@ this.loginForm = this.formBuilder.group({
       this.storage.set('user', this.user)
     else
       this.storage.remove('user');
-      this.viewCtrl.dismiss();
+      // this.viewCtrl.dismiss();
+      this.navCtrl.setRoot(HomePage);
+
+      
       // this.dismiss();
-  }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
-  dismiss() {
-    // this.viewCtrl.dismiss(); this is if i keep it the other way
-    this.navCtrl.setRoot(HomePage);
   }
 }

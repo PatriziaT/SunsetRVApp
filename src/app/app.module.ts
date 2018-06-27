@@ -5,36 +5,42 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
 
-import { AngularFireModule } from 'angularfire2';
+// import { AngularFireModule } from 'angularfire2';
 // import { AngularFireAuth } from 'angularfire2/auth';
-import { Firebase_Config } from './firebase_config';
+// import { Firebase_Config } from './firebase_config';
 
 import { MyApp } from './app.component';
+
+// =Welcome Page
 import { HomePage } from '../pages/home/home';
+
 import { RvdetailPage } from '../pages/rvdetail/rvdetail';
+// =Promotions
 import { SpecialsPage } from '../pages/specials/specials';
+import { SpecialsProvider } from '../providers/specialsdata/specialsdata';
+import { PromotionProvider } from '../providers/promotion/promotion';
+
 import { FavoritePage } from '../pages/favorite/favorite';
-import { LoginPage } from '../pages/login/login';
-import { RegisterPage } from '../pages/register/register';
+import { FavoritesProvider } from '../providers/favorites/favorites';
+
 import { SettingsPage } from '../pages/settings/settings';
 import { NewinventoryPage } from '../pages/newinventory/newinventory';
+import { NewinventoryProvider } from '../providers/newinventory/newinventory';
+
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 
 import { LogoutPage } from '../pages/logout/logout';
-import { MenuPage } from '../pages/menu/menu';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { FavoritesProvider } from '../providers/favorites/favorites';
-import { SpecialsProvider } from '../providers/specialsdata/specialsdata';
 import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-httpmsg';
 import { UserProvider } from '../providers/user/user';
 
-import { NewinventoryProvider } from '../providers/newinventory/newinventory';
-
 import { AuthService } from '../shared/auth.service';
 import { baseURL } from '../shared/baseurl';
-import { PromotionProvider } from '../providers/promotion/promotion';
+
 
 @NgModule({ 
   declarations: [
@@ -46,7 +52,7 @@ import { PromotionProvider } from '../providers/promotion/promotion';
     RegisterPage,
     SettingsPage,
     NewinventoryPage,
-    MenuPage,
+    
     LogoutPage,
     RvdetailPage
   ],
@@ -56,7 +62,7 @@ import { PromotionProvider } from '../providers/promotion/promotion';
     HttpClientModule,
     HttpModule,
     IonicStorageModule.forRoot(),
-    AngularFireModule.initializeApp(Firebase_Config.fire),
+    // AngularFireModule.initializeApp(Firebase_Config.fire),
     // AngularFireAuth
   ],
   bootstrap: [IonicApp],
@@ -69,7 +75,6 @@ import { PromotionProvider } from '../providers/promotion/promotion';
     RegisterPage,
     SettingsPage,
     NewinventoryPage,
-    MenuPage,
     LogoutPage,
     RvdetailPage
   ],
