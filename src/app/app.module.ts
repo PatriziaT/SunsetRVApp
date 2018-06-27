@@ -18,11 +18,9 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { SettingsPage } from '../pages/settings/settings';
 import { NewinventoryPage } from '../pages/newinventory/newinventory';
-import { MenuPage } from '../pages/menu/menu';
-
 
 import { LogoutPage } from '../pages/logout/logout';
-
+import { MenuPage } from '../pages/menu/menu';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -37,8 +35,6 @@ import { NewinventoryProvider } from '../providers/newinventory/newinventory';
 import { AuthService } from '../shared/auth.service';
 import { baseURL } from '../shared/baseurl';
 import { PromotionProvider } from '../providers/promotion/promotion';
-
-
 
 @NgModule({ 
   declarations: [

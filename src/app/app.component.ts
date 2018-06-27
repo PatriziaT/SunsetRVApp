@@ -10,6 +10,7 @@ import { LoginPage } from '../pages/login/login';
 
 
 
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -57,3 +58,4 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
 }
+

@@ -16,7 +16,30 @@
 <ion-content padding> 
   <ion-searchbar [(ngModel)]="terms"></ion-searchbar>
   <!-- <button ion-button type="button" (click)="sort()">Sort</button>  -->
+
+  <ion-grid>
+      <ion-row align-items-center>
+          <ion-col col-12 col-lg-4 *ngFor="let rv of rvs">
+              <ion-card (click)="rvelected($event, rv)" (pan)="addToFavorites(rv)">
+                <img src="{{BaseURL + rv.image}}" />
+                <div class="card-title">{{ rv.name }}</div>
+                <div class="card-subtitle">{{ rvdescription }}</div>
+              </ion-card>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+  <div [hidden]="rv || rvErrMess"></div>
+
  </ion-content>
+
+
+
+
+
+
+
+
+
 <ion-footer>
     <ion-toolbar color="primary">
      <ion-buttons start>
@@ -47,9 +70,9 @@
       </p>
     </ion-card-content>
   </ion-card>
-  <div [hidden]="rv || rvErrMess">
+  <div [hidden]="rv || rvErrMess"></div>
     
-  </div>
+  
   <div *ngIf="rvErrMess">
     <h2>Error</h2>
     <h4>{{rvErrMess}}</h4>
