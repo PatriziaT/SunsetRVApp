@@ -11,14 +11,18 @@ import { Firebase_Config } from './firebase_config';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-//import { ListPage } from '../pages/list/list';
+import { RvdetailPage } from '../pages/rvdetail/rvdetail';
 import { SpecialsPage } from '../pages/specials/specials';
 import { FavoritePage } from '../pages/favorite/favorite';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { SettingsPage } from '../pages/settings/settings';
 import { NewinventoryPage } from '../pages/newinventory/newinventory';
+import { MenuPage } from '../pages/menu/menu';
+
+
 import { LogoutPage } from '../pages/logout/logout';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -46,7 +50,9 @@ import { PromotionProvider } from '../providers/promotion/promotion';
     RegisterPage,
     SettingsPage,
     NewinventoryPage,
-    LogoutPage
+    MenuPage,
+    LogoutPage,
+    RvdetailPage
   ],
   imports: [
     BrowserModule,
@@ -67,7 +73,9 @@ import { PromotionProvider } from '../providers/promotion/promotion';
     RegisterPage,
     SettingsPage,
     NewinventoryPage,
-    LogoutPage
+    MenuPage,
+    LogoutPage,
+    RvdetailPage
   ],
   providers: [
     StatusBar,

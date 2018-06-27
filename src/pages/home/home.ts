@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController , ViewController} from 'ionic-angular';
 
 import { RV } from '../../shared/rv';
@@ -35,15 +35,15 @@ export class HomePage {
       private promotionservice: PromotionProvider
     ) {}
 
-    ngOnInit() {
-      this.rvservice.getFeaturedRV()
-         .subscribe(rv => this.rv = rv,
-          errmess => this.rverrMess = <any>errmess );
-      this.promotionservice.getFeaturedPromotion()
-        .subscribe(promotion => this.promotion = promotion,
-          errmess => this.promoErrMess = <any>errmess );
+    // ngOnInit() {
+    //   this.rvservice.getFeaturedRV()
+    //      .subscribe(rv => this.rv = rv,
+    //       errmess => this.rverrMess = <any>errmess );
+    //   this.promotionservice.getFeaturedPromotion()
+    //     .subscribe(promotion => this.promotion = promotion,
+    //       errmess => this.promoErrMess = <any>errmess );
       
-    }
+    // }
 
      // opens Logout Page
   openLogout() {

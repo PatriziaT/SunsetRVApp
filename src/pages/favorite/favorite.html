@@ -5,7 +5,7 @@
                 <ion-icon name="arrow-back"></ion-icon>
             </button>
         </ion-buttons>
-       <ion-title>Saved Inventory</ion-title>
+       <ion-title>Favorites</ion-title>
    </ion-navbar>
 </ion-header>
   
@@ -20,7 +20,7 @@
       <ion-fab left bottom >
         <button ion-fab>Share</button>
       </ion-fab>
-    </ion-content>
+    <!-- </ion-content> -->
   
     <ion-footer>
         <ion-toolbar color="primary">
@@ -36,7 +36,7 @@
       </ion-footer>
 
 
-    <!-- <div *ngIf="favorites">
+    <div *ngIf="favorites">
       <ion-list>
         <ion-item-sliding *ngFor="let favorite of favorites" #item>
         <ion-item>
@@ -55,12 +55,11 @@
       </ion-list>
     </div>
     <div [hidden]="favorites || errMess">
-      <ion-spinner></ion-spinner>
-      <h4>Loading . . . your favorite RVs</h4> -->
-    <!-- </div>
+      
+    </div>
     <div *ngIf="errMess">
       <h2>Error</h2>
       <h4>{{ errMess }}</h4>
-    </div> -->
-  <!-- </ion-content> -->
+    </div> 
+  </ion-content> 
 
